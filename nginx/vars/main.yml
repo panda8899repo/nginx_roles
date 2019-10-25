@@ -1,0 +1,10 @@
+---
+# vars file for /home/ansible/playbook/roles/nginx
+nginx_pkg: nginx
+nginx_serv: nginx
+nginx_conf_file: /etc/nginx/conf.d/myexmpl.conf
+nginx_template: /home/ansible/playbook/roles/nginx/templates/nginx.j2
+nginx_admin_file: /home/ansible/playbook/roles/nginx/files/admin.html
+admin_user: admin
+admin_password: redhat
+admin_passwd_file: /etc/nginx/.htpasswd

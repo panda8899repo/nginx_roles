@@ -1,0 +1,4 @@
+---
+# tasks file for /home/ansible/playbook/roles/nginx
+- include: install.yml
+- include: configure.yml

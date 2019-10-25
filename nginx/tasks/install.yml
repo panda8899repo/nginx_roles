@@ -1,0 +1,12 @@
+---
+- name: install nginx package
+  yum:
+    name: "{{ nginx_pkg }}"
+    state: latest
+
+- name: start nginx service
+  service:
+    name: "{{ nginx_serv }}"
+    state: started
+    enabled: yes
+

@@ -1,0 +1,20 @@
+---
+- name: add configuration parameters 
+  template:
+    src: "{{ nginx_template }}"
+    dest: "{{ nginx_conf_file }}" 
+  notify: restrat nginx
+
+- name: add contents in indexfile
+  copy:
+    content: "Hello admin {{ ansible_hostname }} you are protected"
+    dest: /usr/share/nginx/html/admin.html
+
+- name: install net tools package
+  yum:
+    name: net-tools
+    state: latest
+
+- name: create password for admin
+  command: htpasswd -b -c "{{ admin_passwd_file }}" "{{ admin_user }}" "{{ admin_password }}" 
+

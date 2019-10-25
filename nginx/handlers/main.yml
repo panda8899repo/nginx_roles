@@ -1,0 +1,6 @@
+---
+# handlers file for /home/ansible/playbook/roles/nginx
+- name: restrat nginx
+  service:
+    name: "{{ nginx_serv }}"
+    state: restarted
