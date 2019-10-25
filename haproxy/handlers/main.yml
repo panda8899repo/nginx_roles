@@ -1,0 +1,6 @@
+---
+# handlers file for /home/ansible/playbook/roles/haproxy
+- name: restart haproxy
+  service:
+    name: "{{ haproxy_serv }}"
+    state: restarted

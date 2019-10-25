@@ -1,0 +1,4 @@
+---
+# tasks file for /home/ansible/playbook/roles/haproxy
+- include: configure_haproxy.yml
+

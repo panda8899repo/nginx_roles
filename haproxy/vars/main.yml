@@ -1,0 +1,6 @@
+---
+# vars file for /home/ansible/playbook/roles/haproxy
+haproxy_pkg: haproxy
+haproxy_serv: haproxy
+haproxy_template: /home/ansible/playbook/roles/haproxy/templates/haproxy.j2
+

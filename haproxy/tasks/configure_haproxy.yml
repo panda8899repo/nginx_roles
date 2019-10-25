@@ -1,0 +1,17 @@
+---
+- name: install package
+  yum:
+    name: "{{ haproxy_pkg }}"
+    state: latest
+
+- name: start service
+  service:
+    name: "{{ haproxy_serv }}"
+    state: started
+    enabled: yes
+
+- name: add template in cfg file
+  template:
+    src: "{{ haproxy_template }}"
+    dest: /etc/haproxy/haproxy.cfg
+  notify: restart haproxy
